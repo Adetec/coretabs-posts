@@ -13,23 +13,33 @@ class PostStore:
         self.posts = posts
 
     def get_all(self):
-        # get all posts - الحصول على كل المنشورات
         for post in self.posts:
             print(post.name)
         return self.posts
 
     def add(self, post):
-        # append post - إضافة منشور
         return self.posts.append(post)
 
     def get_by_id(self, id):
-        # search for post by id - id البحث عن منشور بالمعرف
-        print('hh')
+        result = 'No post with this id'
+
+        for post in self.posts:
+            if post.id == id:
+                result = post
+                break
+
+        print(result.name, result.body)
+        return result
 
     def update(self, id, fields):
-        # update post data - id تعديل منشور بالمعرف
-        print('hh')
+        post = self.get_by_id(id)
+        post.name = fields["name"]
+        post.photo_url = fields["photo_url"]
+        post.body = fields["body"]
+        print(post.name, post.body)
+        return post
 
     def delete(self, id):
-        # delete post by id - id حذف منشور بالمعرف
-        print('hh')
+        post = self.get_by_id(id)
+        self.posts.remove(post)
+        return self.posts

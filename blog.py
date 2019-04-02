@@ -24,9 +24,21 @@ post2 = Post(id=2,
              name='John',
              body='Lorem Ipsum')
 
+updated_fields = {
+    "name": "Adel",
+    "photo_url": "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=1&h=100&w=100",
+    "body": "coucou"
+}
+
+
 store = PostStore([])
 
 store.get_all()
 store.add(post1)
 store.add(post2)
 store.get_all()
+print('Get by id')
+store.get_by_id(2)
+print("Update")
+store.update(2, updated_fields)
+
