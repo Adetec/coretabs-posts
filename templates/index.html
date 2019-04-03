@@ -129,7 +129,7 @@
                             <a href="edit">Edit</a>
                         </div>
                         <div class="buttons">
-                            <a href="delete">Delete</a>
+                            <a href="{{ url_for('post_delete', id=post.id) }}">Delete</a>
                         </div>
                     </div>
                 </div>
