@@ -61,7 +61,7 @@
 
         #author h2 {
             padding-left: 10px;
-            color: grey;
+            color: gray;
         }
 
         #content {
@@ -111,7 +111,7 @@
     <header class="flex-box shadow">
         <h1>Posty</h1>
         <nav>
-            <a id="new" href="post-add.html">+</a>
+            <a id="new" href="{{ url_for('post_add') }}">+</a>
         </nav>
     </header>
     <main class="container">
