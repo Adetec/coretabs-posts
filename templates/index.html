@@ -126,7 +126,7 @@
                     <p id="content">{{post.body}}</p>
                     <div id="post-footer" class="flex-box">
                         <div class="buttons">
-                            <a href="edit">Edit</a>
+                            <a href="{{ url_for('post_update', id=post.id) }}">Edit</a>
                         </div>
                         <div class="buttons">
                             <a href="{{ url_for('post_delete', id=post.id) }}">Delete</a>
