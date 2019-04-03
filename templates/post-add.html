@@ -5,66 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
     <title>post | Posty</title>
-    <style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.5em;
-        }
-        
-        .container{
-            max-width: 400px;
-            margin: 5px auto;
-            padding: 0px 15px;
-            box-sizing: border-box;
-            overflow: auto;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        .shadow {
-            box-shadow: 0 0 30px rgba(0,0,0,0.1);
-        }
-        
-        form input {
-            height: 40px;
-            margin: 20px auto;
-        }
-        
-        form input, textarea {
-            width: 100%;
-            font-size: 1em;
-            border: solid 0.5px #9041e8;
-            padding: 5px;
-            border-radius: 5px;
-        }
-
-        form input, textarea:focus {
-            outline: none !important;
-        }
-
-        h1 {
-            color: #2d43e7;
-            text-align: center;
-        }
-
-        #button {
-            width: 50%;
-            height: 50px;
-            align-content: center;
-            text-align: center;
-            border: solid 1px #9041e8;
-            border-radius: 5px;
-        }
-
-        #button:hover {
-            color: #fff;
-            background: linear-gradient(to left, #2d43e7, #9042e8);
-        }
-
-    </style>
 </head>
 <body>
     <header class="container">
