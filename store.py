@@ -33,9 +33,9 @@ class PostStore:
 
     def update(self, id, fields):
         post = self.get_by_id(id)
-        post.name = fields["name"]
-        post.photo_url = fields["photo_url"]
-        post.body = fields["body"]
+        post.name = fields['name']
+        post.photo_url = fields['photo_url']
+        post.body = fields['body']
         print(post.name, post.body)
         return post
 
